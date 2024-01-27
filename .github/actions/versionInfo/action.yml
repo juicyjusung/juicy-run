@@ -1,0 +1,43 @@
+name: version-info
+description: gets information about a npm tag or version
+
+inputs:
+  version:
+    required: true
+    description: an npm version number (like 7.180.8) or an npm tag like latest/latest-rc
+  npmPackage:
+    required: false
+    default: sfdx-cli
+    description: full npm package name, including namespace if one exists
+
+outputs:
+  version:
+    value: ${{ steps.getNumericalVersion.outputs.version }}
+    description: guaranteed to be an npm number, even if a tag was passed in
+  url:
+    value: https://developer.salesforce.com/media/salesforce-cli/${{ steps.getCli.outputs.cli }}/versions/${{ steps.getNumericalVersion.outputs.version }}/${{ steps.getSha.outputs.sha }}/${{ steps.getCli.outputs.cli }}-v${{ steps.getNumericalVersion.outputs.version }}-${{ steps.getSha.outputs.sha }}-linux-x64.tar.xz
+    description: url where the xz tarball for this version can be downloaded
+  sha:
+    description: short sha for the matching version
+    value: ${{ steps.getSha.outputs.sha }}
+
+runs:
+  using: composite
+  steps:
+    - id: getSha
+      shell: bash
+      run: echo "sha=$(npm view ${{ inputs.npmPackage }}@${{ inputs.version }} --json | jq -r '.gitHead[0:7]')" >> "$GITHUB_OUTPUT"
+
+    - id: getNumericalVersion
+      shell: bash
+      run: echo "version=$(npm view ${{ inputs.npmPackage }}@${{ inputs.version }} --json | jq -r '.version')" >> "$GITHUB_OUTPUT"
+
+    - id: getCli
+      shell: bash
+      run: echo "cli=$(npm view ${{ inputs.npmPackage }}@${{ inputs.version }} --json | jq -r '.oclif.bin')" >> "$GITHUB_OUTPUT"
+
+    - run: echo "regex found version ${{ steps.getNumericalVersion.outputs.version }} with sha ${{ steps.getSha.outputs.sha }} for cli ${{ steps.getCli.outputs.cli }}"
+      shell: bash
+
+    - run: echo "xz url is https://developer.salesforce.com/media/salesforce-cli/${{ steps.getCli.outputs.cli }}/versions/${{ steps.getNumericalVersion.outputs.version }}/${{ steps.getSha.outputs.sha }}/${{ steps.getCli.outputs.cli }}-v${{ steps.getNumericalVersion.outputs.version }}-${{ steps.getSha.outputs.sha }}-linux-x64.tar.xz"
+      shell: bash
