@@ -6280,10 +6280,10 @@ object.values@^1.1.7:
     define-properties "^1.2.0"
     es-abstract "^1.22.1"
 
-oclif@^4.3.9:
-  version "4.3.10"
-  resolved "https://registry.yarnpkg.com/oclif/-/oclif-4.3.10.tgz#d5f1c952741adcf52e34734e661e11bd746e8181"
-  integrity sha512-VQhJlV554xIl8CGkE3bxtg4AWp/AL2BCAnoN9wVuWi4STNwCq7M3ND8yikfTNQxBK3zpsPuwt4cStT9/OSFSjg==
+oclif@^4.4.0:
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/oclif/-/oclif-4.4.0.tgz#dfd989b85530e3d2bd03c0aafd180c461fd8c93f"
+  integrity sha512-uTDTr+B2FA/oCXMpDm/rAEf8e463Jaw0iEGASlo4I7gBib/P4lVFHqCAWlXOwjKsbaR/dbl1Xi3jHTppuGK23A==
   dependencies:
     "@aws-sdk/client-cloudfront" "^3.496.0"
     "@aws-sdk/client-s3" "^3.496.0"
