@@ -18,7 +18,7 @@ $ npm install -g juicy-run
 $ jr COMMAND
 running command...
 $ jr (--version)
-juicy-run/1.0.1 darwin-arm64 node-v20.10.0
+juicy-run/1.1.0 darwin-arm64 node-v20.10.0
 $ jr --help [COMMAND]
 USAGE
   $ jr COMMAND
@@ -28,8 +28,7 @@ USAGE
 # Commands
 <!-- commands -->
 * [`jr`](#jr)
-* [`jr get`](#jr-get)
-* [`jr set PACKAGEMANAGER`](#jr-set-packagemanager)
+* [`jr config`](#jr-config)
 
 ## `jr`
 
@@ -50,68 +49,35 @@ EXAMPLES
   # Run a script with the default package manager
   $ jr
   # Run a script with a specified package manager (npm)
-  $ jr --packageManager npm
+  $ jr --pm npm
   # Run a script with a specified package manager (yarn)
-  $ jr --packageManager yarn
+  $ jr --pm yarn
   # Run a script with a specified package manager (pnpm)
-  $ jr --packageManager pnpm
+  $ jr --pm pnpm
   # Run a script with a specified package manager (bun)
-  $ jr --packageManager bun
+  $ jr --pm bun
 ```
 
-_See code: [dist/index.ts](https://github.com/juicyjusung/juicy-run/blob/v1.0.1/dist/index.ts)_
+_See code: [src/commands/index.ts](https://github.com/juicyjusung/juicy-run/blob/v1.1.0/src/commands/index.ts)_
 
-## `jr get`
+## `jr config`
 
-Retrieve the package manager from the configuration
-
-```
-USAGE
-  $ jr get [-g]
-
-FLAGS
-  -g, --global  Retrieve the package manager from the global configuration
-
-DESCRIPTION
-  Retrieve the package manager from the configuration
-
-EXAMPLES
-  # Retrieve the package manager for the current project
-  $ jr get
-  # Example output if npm is configured as the package manager
-  npm (./path/to/your/package.json)
-```
-
-_See code: [dist/get.ts](https://github.com/juicyjusung/juicy-run/blob/v1.0.1/dist/get.ts)_
-
-## `jr set PACKAGEMANAGER`
-
-Set the package manager for the current project
+This command configures the global & project-specific package manager for your project. If no project-specific package manager is set, this global will be used as a fallback.
 
 ```
 USAGE
-  $ jr set PACKAGEMANAGER [-g]
-
-ARGUMENTS
-  PACKAGEMANAGER  (bun|npm|pnpm|yarn) Specify the package manager to be set for the project. Valid options are "bun",
-                  "npm", "pnpm", and "yarn".
+  $ jr config [--set-global-pm bun|npm|pnpm|yarn]
 
 FLAGS
-  -g, --global  Set the package manager globally if the local project configuration is not present. This flag also
-                determines whether to use the global configuration as a fallback when the local project configuration is
-                missing.
+  --set-global-pm=<option>  Set your gloabl package manager for the project. This serves as a fallback when a
+                            project-specific package manager is not defined. Choose from "bun", "npm", "pnpm", or
+                            "yarn".
+                            <options: bun|npm|pnpm|yarn>
 
 DESCRIPTION
-  Set the package manager for the current project
-
-EXAMPLES
-  # Set npm as the package manager
-  $ jr set npm
-  # Set yarn as the package manager
-  $ jr set yarn
-  # Set pnpm as the package manager
-  $ jr set pnpm
+  This command configures the global & project-specific package manager for your project. If no project-specific package
+  manager is set, this global will be used as a fallback.
 ```
 
-_See code: [dist/set.ts](https://github.com/juicyjusung/juicy-run/blob/v1.0.1/dist/set.ts)_
+_See code: [src/commands/config/index.ts](https://github.com/juicyjusung/juicy-run/blob/v1.1.0/src/commands/config/index.ts)_
 <!-- commandsstop -->
