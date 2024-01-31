@@ -1,24 +1,37 @@
 juicy-run
 =================
+<div align="center">
+  <img src="https://github.com/juicyjusung/juicy-run/assets/46892438/66af1e2d-fb19-4862-99cf-a9c0a1433f8d" width="250">
+  <p>Easily manage and execute package.json scripts with your choice of package manager.</p>
+</div>
 
-Easily manage and execute package.json scripts with your choice of package manager.
+<div align="center">
+  <img src="https://github.com/juicyjusung/juicy-run/assets/46892438/ea850a87-39a2-4851-9d8f-d7fb187f6266" width="500">
+</div>
 
-[![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
-[![CircleCI](https://circleci.com/gh/oclif/hello-world/tree/main.svg?style=shield)](https://circleci.com/gh/oclif/hello-world/tree/main)
 [![GitHub license](https://img.shields.io/github/license/oclif/hello-world)](https://github.com/oclif/hello-world/blob/main/LICENSE)
 
 <!-- toc -->
 * [Usage](#usage)
 * [Commands](#commands)
 <!-- tocstop -->
+# Install
+```sh-session
+$ npm install -g juicy-run
+```
+
+
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g juicy-run
-$ jr COMMAND
+$ jr config -g bun
+
+$ jr
 running command...
-$ jr (--version)
+
+$ jr --version
 juicy-run/1.1.0 darwin-arm64 node-v20.10.0
+
 $ jr --help [COMMAND]
 USAGE
   $ jr COMMAND
