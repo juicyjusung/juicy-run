@@ -2,8 +2,9 @@ juicy-run
 =================
 <div align="center">
   <img src="https://github.com/juicyjusung/juicy-run/assets/46892438/66af1e2d-fb19-4862-99cf-a9c0a1433f8d" width="250">
-  <p>Easily manage and execute package.json scripts with your choice of package manager.</p>
 </div>
+<p><strong>juicy-run</strong> simplifies CLI script management by automatically locating the closest package.json.
+    Choose and execute scripts using your favorite package manager, such as npm, yarn, pnpm, or bun. Designed for efficient workflow, juicy-run enhances your command line experience with ease and precision.</p>
 
 <div align="center">
   <img src="https://github.com/juicyjusung/juicy-run/assets/46892438/ea850a87-39a2-4851-9d8f-d7fb187f6266" width="500">
@@ -25,16 +26,18 @@ $ npm install -g juicy-run
 <!-- usage -->
 ```sh-session
 $ jr config -g bun
+# Set the global package manager to 'bun'
 
 $ jr
-running command...
+# Displays a list of scripts from package.json. Select a script to run it with the chosen package manager.
+
+$ jr -p=yarn
+# Runs the selected script using yarn as the package manager.
 
 $ jr --version
 juicy-run/1.1.0 darwin-arm64 node-v20.10.0
 
 $ jr --help [COMMAND]
-USAGE
-  $ jr COMMAND
 ...
 ```
 <!-- usagestop -->
