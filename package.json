@@ -14,7 +14,7 @@
     "inquirer": "^9.2.12",
     "inquirer-search-list": "^1.2.6"
   },
-  "description": "Easily manage and execute package.json scripts with your choice of package manager.",
+  "description": "Easily manage and execute package.json scripts with your choice of package manager",
   "devDependencies": {
     "@oclif/prettier-config": "^0.2.1",
     "@oclif/test": "^3",
