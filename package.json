@@ -11,7 +11,7 @@
     "@oclif/plugin-not-found": "^3.0.9",
     "@oclif/plugin-plugins": "^4",
     "conf": "^12.0.0",
-    "inquirer": "^9.2.12",
+    "inquirer": "^9.2.13",
     "inquirer-search-list": "^1.2.6"
   },
   "description": "Easily manage and execute package.json scripts with your choice of package manager",
