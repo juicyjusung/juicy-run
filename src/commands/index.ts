@@ -1,5 +1,6 @@
 import { Command, Flags } from '@oclif/core'
-import { default as inquirer } from 'inquirer'
+import { search } from 'fast-fuzzy';
+import autocomplete from 'inquirer-autocomplete-standalone';
 import { spawn } from 'node:child_process'
 
 import { PACKAGE_MANAGER_KEY, getConfigStore } from '../libs/config-store.js'
@@ -68,17 +69,19 @@ $ <%= config.bin %> --pm bun
       }
 
       const scripts = Object.keys(packageJsonData.scripts).map((key) => ({
-        name: key,
+        value: key,
       }))
 
-      const responses = await inquirer.prompt([{
-        choices: scripts,
-        message: `Select a script to run with ${packageManager}`,
-        name: 'script',
-        type: 'list',
-      }])
+      const answer = await autocomplete({
+        message: 'Travel from what country?',
+        async source(input) {
+          if(!input) return scripts
+          return search(input, scripts, {keySelector: (s) => s.value, threshold: 0.5})
+        }
+      })
 
-      const selectedScript = responses.script
+
+      const selectedScript = answer
 
       const scriptCommand = packageJsonData.scripts[selectedScript]
       if (!scriptCommand) {
