@@ -13,6 +13,7 @@ juicy-run
 [![GitHub license](https://img.shields.io/github/license/oclif/hello-world)](https://github.com/oclif/hello-world/blob/main/LICENSE)
 
 <!-- toc -->
+* [Install](#install)
 * [Usage](#usage)
 * [Commands](#commands)
 <!-- tocstop -->
@@ -25,19 +26,14 @@ $ npm install -g juicy-run
 # Usage
 <!-- usage -->
 ```sh-session
-$ jr config -g bun
-# Set the global package manager to 'bun'
-
-$ jr
-# Displays a list of scripts from package.json. Select a script to run it with the chosen package manager.
-
-$ jr -p=yarn
-# Runs the selected script using yarn as the package manager.
-
-$ jr --version
-juicy-run/1.1.0 darwin-arm64 node-v20.10.0
-
+$ npm install -g juicy-run
+$ jr COMMAND
+running command...
+$ jr (--version)
+juicy-run/1.3.0 darwin-arm64 node-v20.10.0
 $ jr --help [COMMAND]
+USAGE
+  $ jr COMMAND
 ...
 ```
 <!-- usagestop -->
@@ -74,7 +70,7 @@ EXAMPLES
   $ jr --pm bun
 ```
 
-_See code: [src/commands/index.ts](https://github.com/juicyjusung/juicy-run/blob/v1.1.0/src/commands/index.ts)_
+_See code: [src/commands/index.ts](https://github.com/juicyjusung/juicy-run/blob/v1.3.0/src/commands/index.ts)_
 
 ## `jr config`
 
@@ -95,5 +91,5 @@ DESCRIPTION
   manager is set, this global will be used as a fallback.
 ```
 
-_See code: [src/commands/config/index.ts](https://github.com/juicyjusung/juicy-run/blob/v1.1.0/src/commands/config/index.ts)_
+_See code: [src/commands/config/index.ts](https://github.com/juicyjusung/juicy-run/blob/v1.3.0/src/commands/config/index.ts)_
 <!-- commandsstop -->
