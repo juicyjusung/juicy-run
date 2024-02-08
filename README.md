@@ -7,7 +7,7 @@ juicy-run
     Choose and execute scripts using your favorite package manager, such as npm, yarn, pnpm, or bun. Designed for efficient workflow, juicy-run enhances your command line experience with ease and precision.</p>
 
 <div align="center">
-  <img src="https://github.com/juicyjusung/juicy-run/assets/46892438/ea850a87-39a2-4851-9d8f-d7fb187f6266" width="500">
+  <img src="https://github.com/juicyjusung/juicy-run/assets/46892438/0d1bc86f-0b3e-41e6-89bc-70acbc92b4ce" width="600">
 </div>
 
 [![GitHub license](https://img.shields.io/github/license/oclif/hello-world)](https://github.com/oclif/hello-world/blob/main/LICENSE)
