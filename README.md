@@ -3,12 +3,23 @@ juicy-run
 <div align="center">
   <img src="https://github.com/juicyjusung/juicy-run/assets/46892438/66af1e2d-fb19-4862-99cf-a9c0a1433f8d" width="250">
 </div>
-<p><strong>juicy-run</strong> simplifies CLI script management by automatically locating the closest package.json.
-    Choose and execute scripts using your favorite package manager, such as npm, yarn, pnpm, or bun. Designed for efficient workflow, juicy-run enhances your command line experience with ease and precision.</p>
+<p><strong>juicy-run</strong> simplifies CLI script management by automatically locating the closest package.json. Choose and execute scripts using your favorite package manager, such as npm, yarn, pnpm, or bun. Designed for an efficient workflow, juicy-run enhances your command line experience with ease and precision. Additionally, it includes a <strong>fuzzy matching</strong> feature, allowing you to quickly select the desired script.</p>
+
+<br/><br/>
 
 <div align="center">
   <img src="https://github.com/juicyjusung/juicy-run/assets/46892438/ea850a87-39a2-4851-9d8f-d7fb187f6266" width="500">
 </div>
+
+<br/>
+<br/>
+
+- **Automatic Detection**: Automatically locates the closest package.json for simplified CLI script management.
+- **Package Manager Compatibility**: Supports various package managers including npm, yarn, pnpm, and bun.
+- **Efficiency and Precision**: Designed to enhance the command line experience, making workflow more efficient and precise.
+- **Fuzzy Finder Feature**: Incorporates fuzzy matching for quickly selecting the desired script, enhancing user convenience and speed.
+  
+<br/><br/><br/>
 
 [![GitHub license](https://img.shields.io/github/license/oclif/hello-world)](https://github.com/oclif/hello-world/blob/main/LICENSE)
 
