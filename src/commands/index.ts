@@ -73,7 +73,7 @@ $ <%= config.bin %> --pm bun
       }))
 
       const answer = await autocomplete({
-        message: 'Travel from what country?',
+        message: `Select a script to run with ${packageManager}`,
         async source(input) {
           if(!input) return scripts
           return search(input, scripts, {keySelector: (s) => s.value, threshold: 0.5})
