@@ -41,7 +41,7 @@ $ npm install -g juicy-run
 $ jr COMMAND
 running command...
 $ jr (--version)
-juicy-run/1.3.3 darwin-arm64 node-v18.18.2
+juicy-run/1.3.4 darwin-arm64 node-v18.18.2
 $ jr --help [COMMAND]
 USAGE
   $ jr COMMAND
@@ -81,7 +81,7 @@ EXAMPLES
   $ jr --pm bun
 ```
 
-_See code: [src/commands/index.ts](https://github.com/juicyjusung/juicy-run/blob/v1.3.3/src/commands/index.ts)_
+_See code: [src/commands/index.ts](https://github.com/juicyjusung/juicy-run/blob/v1.3.4/src/commands/index.ts)_
 
 ## `jr config`
 
@@ -102,5 +102,5 @@ DESCRIPTION
   manager is set, this global will be used as a fallback.
 ```
 
-_See code: [src/commands/config/index.ts](https://github.com/juicyjusung/juicy-run/blob/v1.3.3/src/commands/config/index.ts)_
+_See code: [src/commands/config/index.ts](https://github.com/juicyjusung/juicy-run/blob/v1.3.4/src/commands/config/index.ts)_
 <!-- commandsstop -->
